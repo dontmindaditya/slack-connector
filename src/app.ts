@@ -13,8 +13,6 @@ import { logger } from './utils/logger';
 import { supabase } from './config/supabase';
 import { getQueue, QUEUE_NAMES } from './queue/bullmq';
 
-// ─── Type augmentation ────────────────────────────────────────────────────────
-// Extend Express Request with our custom context and rawBody
 
 declare global {
   namespace Express {
