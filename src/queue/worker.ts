@@ -5,8 +5,6 @@ import { logger } from '../utils/logger';
 
 let workers: Worker[] = [];
 
-/rker runs in this process — separate from the HTTP server.
- */
 export function startWorkers(): void {
   workers = [
     createMessageSyncWorker(),
