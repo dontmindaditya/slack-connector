@@ -9,13 +9,6 @@ import { logger } from '../../utils/logger';
 
 const channelSyncService = new ChannelSyncService();
 
-/**
- * Processes slack:channel-sync jobs.
- * Enqueued by:
- *   - channel.handler.ts (on channel_created/deleted events)
- *   - sync.controller.ts (manual trigger)
- *   - Post OAuth install (initial workspace setup)
- */
 export function createChannelSyncWorker(): Worker<ChannelSyncJobData> {
   const worker = new Worker<ChannelSyncJobData>(
     QUEUE_NAMES.CHANNEL_SYNC,
