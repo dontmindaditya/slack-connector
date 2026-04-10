@@ -13,10 +13,7 @@ export class AuthService {
     this.workspaceRepo = new WorkspaceRepo();
   }
 
-  /**
-   * Exchanges a short-lived OAuth code for a bot token.
-   * Persists the workspace to Supabase (upsert — handles reinstalls).
-   */
+  
   async exchangeCode(code: string): Promise<SlackOAuthResult> {
     const response = await withRetry(
       () =>
