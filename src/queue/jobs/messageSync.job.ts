@@ -9,13 +9,7 @@ import { logger } from '../../utils/logger';
 
 const messageSyncService = new MessageSyncService();
 
-/**
- * Processes slack:message-sync jobs.
- * Enqueued by:
- *   - message.handler.ts (on every incoming Slack message event)
- *   - sync.controller.ts (on manual sync trigger)
- *   - Scheduled job runner (periodic full sync)
- */
+
 export function createMessageSyncWorker(): Worker<MessageSyncJobData> {
   const worker = new Worker<MessageSyncJobData>(
     QUEUE_NAMES.MESSAGE_SYNC,
