@@ -5,10 +5,7 @@ import { logger } from '../utils/logger';
 
 let workers: Worker[] = [];
 
-/**
- * Starts all BullMQ workers.
- * Called from the worker entry point (worker.ts at project root).
- * Each worker runs in this process — separate from the HTTP server.
+/rker runs in this process — separate from the HTTP server.
  */
 export function startWorkers(): void {
   workers = [
