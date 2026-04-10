@@ -81,6 +81,7 @@ export class SlackConnector implements IConnector {
     };
   }
 
+  
   // ─── OAuth ───────────────────────────────────────────────────────────────────
 
   getInstallUrl(options?: OAuthInstallOptions): string {
