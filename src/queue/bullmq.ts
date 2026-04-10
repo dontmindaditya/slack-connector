@@ -25,10 +25,7 @@ export type QueueName = (typeof QUEUE_NAMES)[keyof typeof QUEUE_NAMES];
 
 const queues = new Map<QueueName, Queue>();
 
-/**
- * Returns a memoized Queue instance for the given queue name.
- * Creates it on first call.
- */
+
 export function getQueue(name: QueueName): Queue {
   if (queues.has(name)) return queues.get(name)!;
 
