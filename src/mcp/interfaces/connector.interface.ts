@@ -15,6 +15,9 @@ import type {
   OAuthInstallResult,
 } from '../../types/mcp.types';
 
+
+
+
 /**
  * IConnector — the universal contract every MCP connector must implement.
  *
