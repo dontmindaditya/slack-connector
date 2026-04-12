@@ -5,7 +5,6 @@ import { workspaceMiddleware } from '../middleware/workspace.middleware';
 const router = Router();
 const controller = new MessageController();
 
-// All message routes require workspace context
 router.use(workspaceMiddleware);
 
 // Full-text search — MUST be registered before /:channelId to avoid route shadowing
