@@ -6,9 +6,6 @@ import rateLimit from 'express-rate-limit';
 const router = Router();
 const controller = new AuthController();
 
-// ─── Rate limiter scoped to OAuth endpoints ───────────────────────────────────
-// Install and callback are hit only during user-initiated OAuth flows.
-// 20 attempts per IP per 15 minutes prevents abuse of the install flow.
 
 const oauthRateLimit = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
