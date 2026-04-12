@@ -5,7 +5,7 @@ import { workspaceMiddleware } from '../middleware/workspace.middleware';
 const router = Router();
 const controller = new ChannelController();
 
-// ─── Query param validation middleware ───────────────────────────────────────
+
 
 function validateListQueryParams(
   req: Request,
