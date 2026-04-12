@@ -7,7 +7,6 @@ import { registry } from '../mcp/registry';
 
 const router = Router();
 
-// ─── Health & meta ────────────────────────────────────────────────────────────
 
 router.get('/health', (_req: Request, res: Response) => {
   res.json({
