@@ -5,7 +5,7 @@ import { workspaceMiddleware } from '../middleware/workspace.middleware';
 const router = Router();
 const controller = new SyncController();
 
-// Sync triggers require workspace context
+// Sync triggers require 
 router.post('/messages', workspaceMiddleware, controller.triggerMessageSync);
 router.post('/channels', workspaceMiddleware, controller.triggerChannelSync);
 
