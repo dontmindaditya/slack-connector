@@ -32,5 +32,4 @@ This connector enables seamless interaction with Slack including message reading
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/slack-connector.git
-cd slack-connector
+
