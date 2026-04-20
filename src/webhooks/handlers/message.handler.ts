@@ -9,17 +9,6 @@ const workspaceRepo = new WorkspaceRepo();
 const channelRepo = new ChannelRepo();
 const messageRepo = new MessageRepo();
 
-/**
- * Handles all message.* MCP events dispatched from eventRouter.ts
- *
- * Strategy:
- *   message.created  → write directly to DB (single row, fast)
- *   message.updated  → update text/reactions in DB
- *   message.deleted  → soft-delete in DB
- *
- * For message.created we also enqueue a messageSync job so any
- * thread replies or attachments are captured asynchronously.
- */
 export async function handleMessageEvent(event: MCPEvent): Promise<void> {
   const { workspaceId, type, payload } = event;
 
