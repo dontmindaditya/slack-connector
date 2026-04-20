@@ -5,13 +5,7 @@ import { logger } from '../../utils/logger';
 
 const channelRepo = new ChannelRepo();
 
-/**
- * Handles channel.* MCP events.
- *
- * channel.created  → enqueue channel sync (don't write directly — need full info)
- * channel.deleted  → mark archived in DB
- * member.joined    → enqueue message sync for that channel
- */
+
 export async function handleChannelEvent(event: MCPEvent): Promise<void> {
   const { workspaceId, type, payload } = event;
 
