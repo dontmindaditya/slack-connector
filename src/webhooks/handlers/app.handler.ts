@@ -5,12 +5,7 @@ import { logger } from '../../utils/logger';
 
 const workspaceRepo = new WorkspaceRepo();
 
-/**
- * Handles app lifecycle events.
- *
- * app.uninstalled   → deactivate workspace, evict cached token
- * tokens_revoked    → same as uninstall — treat bot token revocation as uninstall
- */
+
 export async function handleAppEvent(event: MCPEvent): Promise<void> {
   const { workspaceId, type } = event;
 
