@@ -5,10 +5,7 @@ import { env } from '../config/env';
 import { logger } from '../utils/logger';
 
 export class AuthController {
-  /**
-   * GET /api/v1/slack/auth/install
-   * Redirects the user to Slack's OAuth authorization page.
-   */
+
   install = (req: Request, res: Response, next: NextFunction): void => {
     try {
       const connector = registry.get('slack');
