@@ -1,11 +1,7 @@
 import { WebClient, LogLevel } from '@slack/web-api';
 import { env, IS_PRODUCTION } from './env';
 
-/**
- * A lightweight in-process cache of WebClient instances keyed by bot token.
- * Each workspace gets its own token → its own client.
- * In production, tokens come from Supabase (workspace.repo.ts) at request time.
- */
+
 const clientCache = new Map<string, WebClient>();
 
 /**
