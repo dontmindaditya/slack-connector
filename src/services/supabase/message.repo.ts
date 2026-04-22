@@ -39,8 +39,8 @@ export class MessageRepo {
     options: {
       limit?: number;
       offset?: number;
-      before?: string;   // ISO timestamp
-      after?: string;    // ISO timestamp
+      before?: string;  
+      after?: string;    
       threadTs?: string;
     } = {}
   ): Promise<MessageRow[]> {
