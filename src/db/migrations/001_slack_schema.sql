@@ -1,7 +1,7 @@
 -- ============================================================
 -- Collectium Slack Connector — Database Schema
 -- Migration: 001_slack_schema.sql
--- Run in Supabase SQL Editor or via supabase db push
+
 -- ============================================================
 
 -- ─── Extensions ──────────────────────────────────────────────────────────────
