@@ -6,7 +6,7 @@ export class ChannelRepo {
   private readonly TABLE = 'slack_channels' as const;
 
   /**
-   * Find a channel by internal UUID.
+ 
    * Always scoped to workspaceId to enforce multi-tenancy.
    */
   async findById(workspaceId: string, id: string): Promise<ChannelRow | null> {
