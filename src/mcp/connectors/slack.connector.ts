@@ -35,16 +35,7 @@ import { logger } from '../../utils/logger';
 import { decryptToken } from '../../utils/encryption';
 import { lruCache } from '../../utils/cache';
 
-/**
- * SlackConnector — implements IConnector for the Slack platform.
- *
- * This class is the single point of entry for all Slack operations.
- * It delegates to domain services (auth, channel, message, sync) and
- * normalizes Slack-specific types into MCP-generic types.
- *
- * Collectium core only ever calls IConnector methods — it never
- * imports from services/slack/* directly.
- */
+
 export class SlackConnector implements IConnector {
   private readonly authService: AuthService;
   private readonly channelService: ChannelService;
