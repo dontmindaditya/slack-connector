@@ -16,21 +16,6 @@ import type {
 } from '../../types/mcp.types';
 
 
-
-
-/**
- * IConnector — the universal contract every MCP connector must implement.
- *
- * Design principles:
- * - Every method is workspace-scoped via ConnectorContext
- * - No method has side effects outside its declared scope
- * - All methods return typed results or throw ConnectorError subclasses
- * - OAuth, messaging, channels, events, and sync are all first-class concerns
- *
- * To add a new connector (Discord, Notion, Gmail):
- * 1. Create a class that implements IConnector
- * 2. Register it in mcp/registry.ts
- * 3. Done — Collectium can call it without knowing platform internals
  */
 export interface IConnector {
   // ─── Identity ─────────────────────────────────────────────────────────────
