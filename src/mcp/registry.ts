@@ -6,16 +6,7 @@ import { logger } from '../utils/logger';
 
 /**
  * ConnectorRegistry — the central registry for all MCP connectors.
- *
- * Usage:
- *   const slack = registry.get('slack');
- *   await slack.getMessages(ctx, channelId);
- *
- * To add a new connector:
- *   1. Implement IConnector in mcp/connectors/your.connector.ts
- *   2. Import it here and call registry.register(new YourConnector())
- *   3. Done — no other file changes needed
- *
+
  * The registry is a singleton — import { registry } directly.
  */
 class ConnectorRegistry {
